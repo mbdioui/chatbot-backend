@@ -6,7 +6,7 @@ if($method=="POST")
 	$requestbody =file_get_contents('php://input');
 	$json = json_decode($requestbody);
 	
-	$text= $json->result->parameters->text;
+	$text= $json->result->parameters->salle_reservation;
 	switch($text)
 	{
 	case 'hi':
