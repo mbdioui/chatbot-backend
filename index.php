@@ -16,10 +16,10 @@ if($method=="POST")
 		$speech= "bye ,good night";
 		break;
 	case 'anything':
-		$speech="yes you can type anything"
+		$speech="yes you can type anything";
 		break;
 	default:
-		$speech ="sorry, i didnt get that"
+		$speech ="sorry, i didnt get that";
 		break;
 		}
 	$response = new \stdClass();
@@ -28,6 +28,6 @@ if($method=="POST")
 	$response->source="webhook";
 	echo json_encode($response);
 }else
-	echo "method not allowed"
+	echo "method not allowed";
 
 ?>
