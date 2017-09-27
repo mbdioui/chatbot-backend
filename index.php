@@ -5,7 +5,7 @@ if($method=="POST")
 {
 	$requestbody =file_get_contents('php://input');
 	$json = json_decode($requestbody);
-	
+	var_dump($json);
 	$text= $json->result->parameters->salle_reservation;
 	$headers=$json->result;
 	$context=$json->context;
