@@ -7,6 +7,8 @@ if($method=="POST")
 	$json = json_decode($requestbody);
 	
 	$text= $json->result->parameters->salle_reservation;
+	$headers=$json->result;
+	$context=$json->context;
 	switch($text)
 	{
 	case 'hi':
@@ -24,7 +26,8 @@ if($method=="POST")
 		}
 	$response = new \stdClass();
 	$response->speech=$speech;
-	$response->displayText=$text;
+	$response->displayText=$headers;
+	$response->context=$context;
 	$response->source="webhook";
 	echo json_encode($response);
 }else
