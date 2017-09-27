@@ -29,6 +29,7 @@ if($method=="POST")
 	$response->displayText=$headers;
 	$response->context=$context;
 	$response->source="webhook";
+	$reponse->json=$json;
 	echo json_encode($response);
 }else
 	echo "method not allowed";
